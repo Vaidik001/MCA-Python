@@ -36,12 +36,9 @@ govt_duty = total_without_duty * 15 / 100
 bill_amount = total_without_duty + govt_duty
 
 
-# Other Charges from bill
-previous_dues = 1.44
-other_debit_credit = 0.00
-delayed_payment = 26.25
 
-amount_due = bill_amount + previous_dues + other_debit_credit + delayed_payment
+
+
 
 
 
@@ -55,9 +52,7 @@ print("FPPAS Charges @ 3.40%             : $",fppas_charge)
 print("---------------------------------------------")
 print("Total without Govt Duty           : $", total_without_duty)
 print("Govt Duty @ 15%                   : $", govt_duty)
-print("Bill Amount Including Govt Duty   : $", bill_amount)
-print("Previous Dues                     : $", previous_dues)
-print("Other Debit/Credit                : $", other_debit_credit)
-print("Delayed Payment Charges           : $", delayed_payment)
+ 
+
 print("=============================================")
-print("Final Amount Due                  : $", amount_due)
+print("Final Amount Due                  : $", bill_amount)
