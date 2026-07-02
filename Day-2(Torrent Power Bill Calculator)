@@ -1,0 +1,63 @@
+# Torrent Power Bill Calculator
+
+units = int(input("Enter units consumed: "))
+
+
+
+if units <= 50:
+    energy_charge = units * 3.20
+elif units <= 200:
+    energy_charge = (50 * 3.20) + ((units - 50) * 3.95)
+else:
+    energy_charge = (50 * 3.20) + (150 * 3.95) + ((units - 200) * 5.00)
+
+
+# Fixed Charge
+fixed_charge = 50.00  
+
+
+# Base FPPAS
+base_fppas = units * 3.72
+
+
+# FPPAS Charges
+fppas_charge = (energy_charge + fixed_charge + base_fppas) * 3.40 / 100
+
+
+# Total before Govt Duty
+total_without_duty = energy_charge + fixed_charge + base_fppas + fppas_charge
+
+
+# Govt Duty = 15%
+govt_duty = total_without_duty * 15 / 100
+
+
+# Bill amount including duty
+bill_amount = total_without_duty + govt_duty
+
+
+# Other Charges from bill
+previous_dues = 1.44
+other_debit_credit = 0.00
+delayed_payment = 26.25
+
+amount_due = bill_amount + previous_dues + other_debit_credit + delayed_payment
+
+
+
+
+print("\n========= TORRENT POWER BILL =========")
+print("Units Consumed                     :", units)
+print("Energy Charges (A)                : $", energy_charge)
+print("Fixed Charges (B)                 : $", fixed_charge)
+print("Base FPPAS (C)                    : $", base_fppas)
+print("FPPAS Charges @ 3.40%             : $",fppas_charge)
+print("---------------------------------------------")
+print("Total without Govt Duty           : $", total_without_duty)
+print("Govt Duty @ 15%                   : $", govt_duty)
+print("Bill Amount Including Govt Duty   : $", bill_amount)
+print("Previous Dues                     : $", previous_dues)
+print("Other Debit/Credit                : $", other_debit_credit)
+print("Delayed Payment Charges           : $", delayed_payment)
+print("=============================================")
+print("Final Amount Due                  : $", amount_due)
