@@ -23,20 +23,22 @@ Object-Oriented Programming (OOP)
 Modules & Packages
 Practice Programs
 College Assignments
+
 🛠️ Technologies Used
 Python 3
 Spyder(Anaconda)
 Jupyter Notebook
 Visual Studio Code
 Git & GitHub
+
 🎯 Purpose
 The main objectives of this repository are to:
-
 Strengthen Python programming skills.
 Complete MCA coursework and practical assignments.
 Practice coding and problem-solving.
 Build a strong foundation for Data Science and Software Development.
 Track my learning progress over time.
+
 📈 Repository Status
 🚧 This repository is actively maintained and updated with new concepts, assignments, and practice programs as I progress through my MCA.
 
